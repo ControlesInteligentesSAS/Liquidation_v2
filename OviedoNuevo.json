@@ -1,0 +1,166 @@
+{
+    "tarifas":
+    [
+      {
+        "tarifa": "Oviedo",
+        "conveniossaldo0": true,
+        "tiempo_gracia": 8,
+        "formulas": {
+          "normalcarros": {
+            "alcance": "transaccion",
+            "plena": 10000,
+            "tipoplena": "dia",
+            "valores": [
+              {
+                "valor": 3000,
+                "min": 180,
+                "mingracia": 30
+              },
+              {
+                "valor": 2000,
+                "min": 60,
+                "fraccion": false,
+                "mingracia": 0
+              }
+            ]
+          },
+          "normalmotos": {
+            "vigencia": "2022-12-31T23:59:59",
+            "alcance": "transaccion",
+            "valores": [
+              {
+                "valor": 3000,
+                "min": 180,
+                "mingracia": 2
+              },
+              {
+                "valor": 2000,
+                "min": 60,
+                "fraccion": false,
+                "mingracia": 0
+              }
+            ]
+          },
+          "domingo": {
+            "alcance": "transaccion",
+            "valores": [
+              {
+                "valor": 0,
+                "min": 0,
+                "mingracia": 0
+              }
+            ]
+          }
+        },
+        "horarios": {
+          "normal": {
+            "rango": [
+              {
+                "dias": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ],
+                "horas": {
+                  "desde": "00:00:00",
+                  "hasta": "23:59:59"
+                }
+              },
+              {
+                "dias": [
+                  6,
+                  9
+                ],
+                "horas": {
+                  "desde": "13:00:00",
+                  "hasta": "23:59:59"
+                }
+              }
+            ]
+          },
+          "domingo": {
+            "rango": [
+              {
+                "dias": [
+                  6,
+                  9
+                ],
+                "horas": {
+                  "desde": "00:00:00",
+                  "hasta": "12:59:59"
+                }
+              }
+            ]
+          }
+        },
+        "reglas": [
+          {
+            "usuario": "visitante",
+            "zona": [
+              1
+            ],
+            "vehiculo": [
+              1
+            ],
+            "formula": "normalcarros",
+            "horario": "normal"
+          },
+          {
+            "usuario": "visitante",
+            "zona": [
+              1
+            ],
+            "vehiculo": [
+              2
+            ],
+            "formula": "normalmotos",
+            "horario": "normal"
+          },
+          {
+            "usuario": "visitante",
+            "zona": [
+              1,
+              2
+            ],
+            "vehiculo": [
+              1,
+              2
+            ],
+            "formula": "domingo",
+            "horario": "domingo"
+          }
+        ],
+        "convenios": {
+          "2": {
+            "convenio": "Cinecolombia",
+            "tipovalor": 0,
+            "valor": 1800
+          },
+          "1": {
+            "convenio": "Admin",
+            "id": 1,
+            "tipovalor": 0,
+            "valor": 0
+          },
+          "11": {
+            "convenio": "T4",
+            "id": 11,
+            "tipovalor": 0,
+            "valor": 60,
+            "tipo": "acumular"
+          },
+          "3": {
+            "convenio": "McDonalds",
+            "id": 3,
+            "tipovalor": 1,
+            "valor": 1500,
+            "tipo": "acumular"
+          }
+        }
+      }
+    ]
+}
+
